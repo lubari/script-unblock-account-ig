@@ -4,6 +4,9 @@ from time import sleep
 from selenium.webdriver.common.by import By
 import random
 
+USER_NAME = ""
+PASSWORD = ""
+
 # Configuración del driver
 driver = webdriver.Chrome()
 
@@ -17,9 +20,9 @@ sleep(3)
 
 # Entrar
 username = driver.find_element(By.NAME, "username")
-username.send_keys('your_user_name')
+username.send_keys(USER_NAME)
 password = driver.find_element(By.NAME, 'password')
-password.send_keys('your_password')
+password.send_keys(PASSWORD)
 
 button_login = driver.find_element(By.XPATH,'//*[@id="loginForm"]/div/div[3]')
 button_login.click()
